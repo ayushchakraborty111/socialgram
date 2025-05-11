@@ -63,7 +63,7 @@ const LeftSidebar = () => {
   const logoutHandler = async () => {
     try {
       const res = await axios.get(
-        `${import.meta.env.VITE_API_URL}/api/v1/user/logout`,
+        `https://socialgram-backend-bwan.onrender.com/api/v1/user/logout`,
         { withCredentials: true }
       );
       if (res.data.success) {

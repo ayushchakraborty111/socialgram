@@ -60,7 +60,7 @@ function App() {
 
   useEffect(() => {
     if (user) {
-      const socketio = io(import.meta.env.VITE_API_URL, {
+      const socketio = io('https://socialgram-backend-bwan.onrender.com/', {
         query: {
           userId: user?._id
         },

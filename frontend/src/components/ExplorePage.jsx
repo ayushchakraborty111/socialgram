@@ -7,7 +7,7 @@ const ExplorePage = () => {
 
   useEffect(() => {
     axios
-      .get(`${import.meta.env.VITE_API_URL}/api/v1/post/explorePosts`, { withCredentials: true })
+      .get(`https://socialgram-backend-bwan.onrender.com/api/v1/post/explorePosts`, { withCredentials: true })
       .then((res) => {
         if (res.data.success) {
           setPosts(res?.data?.posts);

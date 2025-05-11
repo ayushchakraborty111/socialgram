@@ -18,7 +18,7 @@ const ChatPage = () => {
 
     const sendMessageHandler = async (receiverId) => {
         try {
-            const res = await axios.post(`${import.meta.env.VITE_API_URL}/api/v1/message/send/${receiverId}`, { textMessage }, {
+            const res = await axios.post(`https://socialgram-backend-bwan.onrender.com/api/v1/message/send/${receiverId}`, { textMessage }, {
                 headers: {
                     'Content-Type': 'application/json'
                 },
@@ -41,7 +41,7 @@ const ChatPage = () => {
 
     const setMessageIsRead = async (id) => {
         try {
-            const res = await axios.put(`${import.meta.env.VITE_API_URL}/api/v1/user/message-read/${id}`, {}, {
+            const res = await axios.put(`https://socialgram-backend-bwan.onrender.com/api/v1/user/message-read/${id}`, {}, {
                 headers: {
                     'Content-Type': 'application/json'
                 },

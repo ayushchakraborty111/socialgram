@@ -15,7 +15,7 @@ const SuggestedUsers = () => {
     const followOrUnfollow = (userId) => async () => {
         console.log(userId, 'userId');
         try {
-            const res = await axios.post(`${import.meta.env.VITE_API_URL}/api/v1/user/followorunfollow/${userId}`, {}, {
+            const res = await axios.post(`https://socialgram-backend-bwan.onrender.com/api/v1/user/followorunfollow/${userId}`, {}, {
                 headers: {
                     'Content-Type': 'application/json'
                 },

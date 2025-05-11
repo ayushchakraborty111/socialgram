@@ -9,7 +9,7 @@ const useGetLoggedUserFollow = () => {
     useEffect(() => {
         const fetchSuggestedUsers = async () => {
             try {
-                const res = await axios.get(`${import.meta.env.VITE_API_URL}/api/v1/user/getLoggedUserFollowers`, { withCredentials: true });
+                const res = await axios.get(`https://socialgram-backend-bwan.onrender.com/api/v1/user/getLoggedUserFollowers`, { withCredentials: true });
                 console.log(res, 'getLoggedUserFollowers');
                 if (res.data.success) { 
                     dispatch(setLoggedUserFollow(res.data.following));

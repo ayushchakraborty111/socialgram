@@ -17,7 +17,7 @@ const SearchComponent = () => {
 
     const delayDebounce = setTimeout(() => {
       axios
-        .get(`${import.meta.env.VITE_API_URL}/api/v1/user/searchUsers?q=${query}`, {
+        .get(`https://socialgram-backend-bwan.onrender.com/api/v1/user/searchUsers?q=${query}`, {
           withCredentials: true
         })
         .then(res => {
